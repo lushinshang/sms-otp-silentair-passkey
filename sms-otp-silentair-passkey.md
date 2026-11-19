@@ -23,7 +23,7 @@ sources:
 
 沒有人把驗證碼交出去，驗證碼還是到了別人手上。
 
-資安公司 Enea 在 2026 年 11 月 11 日公布的研究裡，記下了這樣的現象：有些人的簡訊在電信網路裡被攔截，緊接著就出現一則登入用的驗證碼（[00:11](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=11s)）。Enea 研判，攻擊者的目的之一是闖進這些人的其他帳號。受害者沒有點錯連結，也沒有接到假客服電話，整件事發生在他們看不到的地方。
+資安公司 Enea 在 2026 年 11 月 11 日公布的[研究](https://www.enea.com/insights/the-enemy-within-tracking-liminal-panda-and-silentair-through-mobile-networks/)裡，記下了這樣的現象：有些人的簡訊在電信網路裡被攔截，緊接著就出現一則登入用的驗證碼（[00:11](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=11s)）。Enea 研判，攻擊者的目的之一是闖進這些人的其他帳號。受害者沒有點錯連結，也沒有接到假客服電話，整件事發生在他們看不到的地方。
 
 許明恩在這支影片裡講的就是這件事，結論只有一句：重要的帳號，別再靠簡訊驗證碼，改成在你自己的裝置上驗證（[00:34](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=34s)）。以下順著影片走一遍，補上它來不及說的幾個條件。
 
@@ -61,9 +61,9 @@ sources:
 
 ### 第二站：電信櫃檯
 
-第二站的手法更老。歹徒冒充你，或買通電信公司員工，把你的門號換發到一張新的 SIM 卡上，之後寄給你的驗證碼就送到他手上（[01:27](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=87s)）。這種手法叫 SIM 換卡（SIM swap）。美國 FBI 網路犯罪申訴中心光是 2021 年就收到 1,611 件這類投訴，調整後的損失超過 6,800 萬美元（[01:38](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=98s)）。
+第二站的手法更老。歹徒冒充你，或買通電信公司員工，把你的門號換發到一張新的 SIM 卡上，之後寄給你的驗證碼就送到他手上（[01:27](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=87s)）。這種手法叫 SIM 換卡（SIM swap）。[美國 FBI 網路犯罪申訴中心](https://www.ic3.gov/PSA/2022/PSA220208)光是 2021 年就收到 1,611 件這類投訴，調整後的損失超過 6,800 萬美元（[01:38](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=98s)）。
 
-台灣也發生過。TVBS 2022 年報導，一位人在海外工作的 A 先生，門號被人用變造的身分證掛失補發走了（[01:48](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=108s)）。影片引用了他受訪的片段（[01:57](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=117s)），TVBS 報導裡的文字是：
+台灣也發生過。[TVBS 2022 年報導](https://news.tvbs.com.tw/life/1705527)，一位人在海外工作的 A 先生，門號被人用變造的身分證掛失補發走了（[01:48](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=108s)）。影片引用了他受訪的片段（[01:57](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=117s)），TVBS 報導裡的文字是：
 
 > 「我是本人，是正主，是去把它(門號)鎖起來，是要求停話但停完之後它立刻被解開，而且電信公司就給他(歹徒)解了，即使我反映了之後，電信公司還是讓他解(鎖)。」
 
@@ -71,7 +71,7 @@ sources:
 
 ### 第三站：你自己的手機
 
-第三站離你最近。Google 的資安團隊說明過，詐騙 App 常常要求讀取簡訊、讀取通知的權限，**拿到之後就能在背景把驗證碼讀走**（[02:24](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=144s)）。Google 那篇 2024 年的文章談的是 Android 上不經應用程式商店、直接下載安裝的 App；它列出的常被濫用權限還有一項「無障礙」，可以窺看螢幕內容。
+第三站離你最近。Google 的資安團隊說明過，詐騙 App 常常要求讀取簡訊、讀取通知的權限，**拿到之後就能在背景把驗證碼讀走**（[02:24](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=144s)）。Google 那篇 2024 年的[文章](https://security.googleblog.com/2024/02/piloting-new-ways-to-protect-Android-users-from%20financial-fraud.html)談的是 Android 上不經應用程式商店、直接下載安裝的 App；它列出的常被濫用權限還有一項「無障礙」，可以窺看螢幕內容。
 
 回到開頭那條規矩：三站沒有一站需要你開口把驗證碼告訴別人（[02:33](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=153s)）。
 
@@ -91,15 +91,15 @@ sources:
 
 ### 驗證器 App：數字還在，但不再經過電信
 
-第一種是驗證器 App，例如 Google Authenticator。設定的時候，網站和你的手機先約好一組秘密，之後由手機自己算出一次性的數字（[02:57](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=177s)）。這組數字不是寄來的，手機沒有網路、沒有訊號也算得出來（[03:04](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=184s)），電信網路和電信櫃檯都碰不到它。影片舉幣安為例，它把驗證器列為驗證選項之一（[03:11](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=191s)）。
+第一種是驗證器 App，例如 [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=zh-Hant)。設定的時候，網站和你的手機先約好一組秘密，之後由手機自己算出一次性的數字（[02:57](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=177s)）。這組數字不是寄來的，手機沒有網路、沒有訊號也算得出來（[03:04](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=184s)），電信網路和電信櫃檯都碰不到它。影片舉[幣安](https://www.binance.com/en/support/faq/detail/b53000f9a9c4406db5f93a8f8e7475f6)為例，它把驗證器列為驗證選項之一（[03:11](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=191s)）。
 
-影片沒講的是，美國網路安全主管機關 CISA 的指引寫明：驗證器的數字比簡訊好，**但仍然可能被釣魚**。數字終究要你自己打進去，打進假網站，一樣會被即時拿去用。
+影片沒講的是，美國網路安全主管機關 CISA 的[指引](https://www.cisa.gov/sites/default/files/2024-12/guidance-mobile-communications-best-practices.pdf)寫明：驗證器的數字比簡訊好，**但仍然可能被釣魚**。數字終究要你自己打進去，打進假網站，一樣會被即時拿去用。
 
 ### 通行密鑰：假網站騙不走
 
 更進一步的是通行密鑰，英文叫 passkey（[03:14](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=194s)）。登入時不用打任何數字，只要用指紋或臉打開手機的螢幕鎖，由手機裡的通行密鑰替你回答網站（[03:18](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=198s)）。影片的說法是「它只認真的網站，假網站騙不走，你的指紋和臉也不會離開手機」（[03:26](https://www.youtube.com/watch?v=pA9gXxCqkYQ&t=206s)）。
 
-通行密鑰建立時就記住了網站的網址。**假網站長得再像，網址不同，手機就不會替它回應**，你也沒有任何數字可以被騙著打出去。美國國家標準與技術研究院（NIST）的數位身分指引把這種「綁定網址」列為抗釣魚的方法之一；Google 的說明頁則寫明，指紋或人臉解鎖用的生物辨識資料「只會儲存在裝置上」。
+通行密鑰建立時就記住了網站的網址。**假網站長得再像，網址不同，手機就不會替它回應**，你也沒有任何數字可以被騙著打出去。美國國家標準與技術研究院（NIST）的[數位身分指引](https://pages.nist.gov/800-63-4/sp800-63b.html)把這種「綁定網址」列為抗釣魚的方法之一；Google 的[說明頁](https://support.google.com/accounts/answer/13548313?hl=zh-Hant)則寫明，指紋或人臉解鎖用的生物辨識資料「只會儲存在裝置上」。
 
 ![流程對照：驗證器 App 碰到假網站時，你把手機算出的數字打進去，攻擊者把數字轉送到真網站登入；通行密鑰碰到假網站時，手機比對網址發現不符，不回應，沒有數字可騙。](images/fig-phishing-zh.svg)
 *圖：本文依 CISA 指引與 NIST 數位身分指引整理。*
@@ -132,7 +132,7 @@ sources:
 
 *表：本文依 Enea、FBI IC3、NIST、中華電信與 Google 原文整理。*
 
-規範面，CISA 直接建議別用簡訊當第二道驗證，也建議為電信帳戶加設 PIN 碼與多重驗證，降低被換卡的風險；NIST 把簡訊驗證列為「受限制」的驗證方式，並建議寄送簡訊驗證碼前，先看換 SIM 卡、攜碼（把門號轉到別家電信）這類風險訊號。台灣有一個銀行端的實例：中華電信與臺灣企銀 2025 年合作，客戶做電子支付綁定交易時，銀行即時向中華電信查詢門號近期有沒有異常的 SIM 卡更換紀錄，新聞稿講的範圍只有這家銀行、這類交易。
+規範面，CISA 直接建議別用簡訊當第二道驗證，也建議為電信帳戶加設 PIN 碼與多重驗證，降低被換卡的風險；NIST 把簡訊驗證列為「受限制」的驗證方式，並建議寄送簡訊驗證碼前，先看換 SIM 卡、攜碼（把門號轉到別家電信）這類風險訊號。台灣有一個銀行端的實例：中華電信與臺灣企銀 [2025 年合作](https://www.cht.com.tw/zh-tw/home/cht/messages/2025/0709-1550)，客戶做電子支付綁定交易時，銀行即時向中華電信查詢門號近期有沒有異常的 SIM 卡更換紀錄，新聞稿講的範圍只有這家銀行、這類交易。
 
 SilentAir 跟一般人有沒有關係？Enea 的原文兩面都寫了。目標「包括」政治與政府要人，多國節點聯手鎖定要人的情形屬於例外；台灣使用者是主要的外部目標，一波攻擊從單一或少數使用者到一個月數千人都有。沒有一手來源說一般民眾正被大規模攔截簡訊。不過，**SIM 換卡和詐騙 App 本來就是衝著一般人來的犯罪**，「別靠簡訊」的結論對一般人一樣成立。
 
@@ -148,18 +148,18 @@ SilentAir 跟一般人有沒有關係？Enea 的原文兩面都寫了。目標�
 
 ## 來源清單
 
-- 區塊勢：〈別再用簡訊驗證碼！即便你沒給任何人，它還是會被攔截！重要帳號該換掉簡訊驗證〉，2026-11-19，https://www.youtube.com/watch?v=pA9gXxCqkYQ
-- Enea：The Enemy Within. Tracking LIMINAL PANDA and SilentAir through Mobile Networks，2026-11-11，https://www.enea.com/insights/the-enemy-within-tracking-liminal-panda-and-silentair-through-mobile-networks/
-- iThome：〈國家級駭客組織 SilentAir 鎖定臺灣等十多個國家的手機用戶〉，2026-11-16，https://www.ithome.com.tw/news/180533
-- FBI IC3：Criminals Increasing SIM Swap Schemes to Steal Millions of Dollars from US Public（PSA220208），2022-02-08，https://www.ic3.gov/PSA/2022/PSA220208
-- TVBS 新聞網：〈個資、手機SIM卡遭掌握！歹徒冒用身分 受害者百萬積蓄沒了〉，2022-01-31，https://news.tvbs.com.tw/life/1705527
-- Google Online Security Blog：Piloting new ways of protecting Android users from financial fraud，2024-02-06，https://security.googleblog.com/2024/02/piloting-new-ways-to-protect-Android-users-from%20financial-fraud.html
-- Google 帳戶說明：透過 Google Authenticator 取得驗證碼，https://support.google.com/accounts/answer/1066447?hl=zh-Hant
-- Google 帳戶說明：以密碼金鑰登入，https://support.google.com/accounts/answer/13548313?hl=zh-Hant
-- Binance：How to Activate 2FA Verification，https://www.binance.com/en/support/faq/detail/b53000f9a9c4406db5f93a8f8e7475f6
-- Chrome for Developers：Understand passkeys in 4 minutes，https://www.youtube.com/watch?v=2xdV-xut7EQ
-- CISA：Mobile Communications Best Practice Guidance，2024-12-18，https://www.cisa.gov/sites/default/files/2024-12/guidance-mobile-communications-best-practices.pdf
-- NIST：SP 800-63B Digital Identity Guidelines: Authentication and Authenticator Management（800-63-4），https://pages.nist.gov/800-63-4/sp800-63b.html
-- 中華電信：〈中華電信助力臺灣企銀推動金融防詐 自主研發通信防詐API〉，2025-07-09，https://www.cht.com.tw/zh-tw/home/cht/messages/2025/0709-1550
-- 區塊勢：關於，https://blocktrend.substack.com/about
-- 延伸閱讀：區塊勢第 702 期〈史上最大密碼外洩！中國推出國家登入、蘋果加速升級通行密鑰〉，https://www.blocktrend.today/p/702
+- [區塊勢：〈別再用簡訊驗證碼！即便你沒給任何人，它還是會被攔截！重要帳號該換掉簡訊驗證〉](https://www.youtube.com/watch?v=pA9gXxCqkYQ)，2026-11-19
+- [Enea：The Enemy Within. Tracking LIMINAL PANDA and SilentAir through Mobile Networks](https://www.enea.com/insights/the-enemy-within-tracking-liminal-panda-and-silentair-through-mobile-networks/)，2026-11-11
+- [iThome：〈國家級駭客組織 SilentAir 鎖定臺灣等十多個國家的手機用戶〉](https://www.ithome.com.tw/news/180533)，2026-11-16
+- [FBI IC3：Criminals Increasing SIM Swap Schemes to Steal Millions of Dollars from US Public（PSA220208）](https://www.ic3.gov/PSA/2022/PSA220208)，2022-02-08
+- [TVBS 新聞網：〈個資、手機SIM卡遭掌握！歹徒冒用身分 受害者百萬積蓄沒了〉](https://news.tvbs.com.tw/life/1705527)，2022-01-31
+- [Google Online Security Blog：Piloting new ways of protecting Android users from financial fraud](https://security.googleblog.com/2024/02/piloting-new-ways-to-protect-Android-users-from%20financial-fraud.html)，2024-02-06
+- [Google 帳戶說明：透過 Google Authenticator 取得驗證碼](https://support.google.com/accounts/answer/1066447?hl=zh-Hant)
+- [Google 帳戶說明：以密碼金鑰登入](https://support.google.com/accounts/answer/13548313?hl=zh-Hant)
+- [Binance：How to Activate 2FA Verification](https://www.binance.com/en/support/faq/detail/b53000f9a9c4406db5f93a8f8e7475f6)
+- [Chrome for Developers：Understand passkeys in 4 minutes](https://www.youtube.com/watch?v=2xdV-xut7EQ)
+- [CISA：Mobile Communications Best Practice Guidance](https://www.cisa.gov/sites/default/files/2024-12/guidance-mobile-communications-best-practices.pdf)，2024-12-18
+- [NIST：SP 800-63B Digital Identity Guidelines: Authentication and Authenticator Management（800-63-4）](https://pages.nist.gov/800-63-4/sp800-63b.html)
+- [中華電信：〈中華電信助力臺灣企銀推動金融防詐 自主研發通信防詐API〉](https://www.cht.com.tw/zh-tw/home/cht/messages/2025/0709-1550)，2025-07-09
+- [區塊勢：關於](https://blocktrend.substack.com/about)
+- [延伸閱讀：區塊勢第 702 期〈史上最大密碼外洩！中國推出國家登入、蘋果加速升級通行密鑰〉](https://www.blocktrend.today/p/702)

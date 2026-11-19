@@ -40,4 +40,4 @@
 
 ## 狀態
 
-已發布（2026-11-19，commit e3cca6d）：https://lushinshang.github.io/sms-otp-silentair-passkey/ ；repo：https://github.com/lushinshang/sms-otp-silentair-passkey
+已發布（2026-11-19，commit d881796）：https://lushinshang.github.io/sms-otp-silentair-passkey/ ；repo：https://github.com/lushinshang/sms-otp-silentair-passkey
