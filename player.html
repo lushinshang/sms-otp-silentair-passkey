@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230f7b6c%27/%3E%3Cpath d=%27M12 46 26 30l8 8 18-22%27 stroke=%27white%27 stroke-width=%277%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
+<title>別再用簡訊驗證碼！（中文字幕）</title>
+<meta name="description" content="區塊勢〈別再用簡訊驗證碼！〉中文字幕播放器：影片嵌入自 YouTube，字幕由 AI 模型依影片畫面上的燒入字幕擷取並同步，非官方。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:title" content="別再用簡訊驗證碼！（中文字幕）">
+<meta property="og:description" content="區塊勢〈別再用簡訊驗證碼！〉中文字幕播放器：影片嵌入自 YouTube，字幕由 AI 模型依影片畫面上的燒入字幕擷取並同步，非官方。">
+<meta property="og:image" content="https://lushinshang.github.io/sms-otp-silentair-passkey/images/og-hero.jpg">
+<meta property="og:image:alt" content="示意圖：簡訊驗證碼從網站寄出後，會經過電信網路、電信櫃檯、你的手機三個可被讀走的地方。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="別再用簡訊驗證碼！（中文字幕）">
+<meta name="twitter:description" content="區塊勢〈別再用簡訊驗證碼！〉中文字幕播放器：影片嵌入自 YouTube，字幕由 AI 模型依影片畫面上的燒入字幕擷取並同步，非官方。">
+<meta name="twitter:image" content="https://lushinshang.github.io/sms-otp-silentair-passkey/images/og-hero.jpg">
+<meta property="og:url" content="https://lushinshang.github.io/sms-otp-silentair-passkey/player.html">
+<style>
+:root{
+  --bg:#f9f7f4; --surface:#fffdf9; --ink:#1a1a1a; --muted:#5f5b54; --line:#e4dfd6;
+  --accent:#0f7b6c; --accent-ink:#0b5c51; --note:#f0ebe1; --code:#ece6d8; --link:#1f5f99;
+  --card:#fff6e8; --card-line:#e8c99a; --shadow:0 6px 24px rgba(40,30,10,.08);
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#1b1a18; --surface:#26241f; --ink:#ece8de; --muted:#aaa497; --line:#3a3730;
+    --accent:#4fc1ad; --accent-ink:#7fd6c6; --note:#2f2c25; --code:#33302a; --link:#8fbde8;
+    --card:#2d2820; --card-line:#5b4a30; --shadow:0 6px 24px rgba(0,0,0,.35);}
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);overflow-x:hidden;
+  font:17px/1.7 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+.skip{position:absolute;left:-999px;top:0;background:var(--accent);color:#fff;padding:8px 14px;z-index:300}
+.skip:focus{left:8px;top:8px}
+a{color:var(--link);overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.page{max-width:1040px;margin:0 auto;padding:0 20px 64px}
+header.hero{padding:32px 0 14px;text-align:center}
+.eyebrow{margin:0 0 6px;color:var(--accent-ink);font-weight:700;font-size:14px}
+h1{margin:0 auto 8px;max-width:860px;font-size:clamp(1.3rem,1rem + 1.6vw,1.9rem);line-height:1.35;text-wrap:balance}
+.lede{margin:0 auto 8px;max-width:760px;color:var(--muted);font-size:15px;line-height:1.6}
+nav.links{font-size:14px;color:var(--muted)}
+nav.links a{display:inline-block;padding:4px 6px;min-height:32px}
+.player-container{position:relative;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.player-container iframe,.player-container #yt{position:absolute;inset:0;width:100%;height:100%;border:0}
+.fs-exit-btn{display:none;position:absolute;top:14px;right:14px;z-index:2147483647;background:rgba(0,0,0,.75);color:#fff;
+  border:1px solid rgba(255,255,255,.35);border-radius:20px;padding:8px 16px;font-size:.88rem;font-weight:600;cursor:pointer;min-height:40px}
+.overlay-sub{display:none;position:absolute;bottom:clamp(30px,4.6vw,60px);left:50%;transform:translateX(-50%);width:min(80%,1040px);
+  text-align:center;pointer-events:none;z-index:2147483646}
+.overlay-sub-box{display:inline-block;background:rgba(0,0,0,.5);border:0;border-radius:8px;padding:2px 12px;max-width:100%}
+.ov-zh{font-size:clamp(.95rem,1.9vw,1.35rem);font-weight:600;line-height:1.35;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.95)}
+.ov-en{font-size:clamp(.75rem,1.25vw,.95rem);color:#ececec;margin-top:1px;line-height:1.3;text-shadow:0 1px 3px rgba(0,0,0,.95)}
+.player-container:fullscreen{width:100vw;height:100vh;border-radius:0;aspect-ratio:auto}
+.player-container:-webkit-full-screen{width:100vw;height:100vh;border-radius:0;aspect-ratio:auto}
+.player-container:fullscreen .overlay-sub,.player-container:-webkit-full-screen .overlay-sub,
+.player-container:fullscreen .fs-exit-btn,.player-container:-webkit-full-screen .fs-exit-btn{display:block}
+.player-container.is-web-fs{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;height:100dvh!important;
+  max-width:100%!important;z-index:9999999!important;border-radius:0!important;aspect-ratio:auto!important}
+.player-container.is-web-fs .overlay-sub,.player-container.is-web-fs .fs-exit-btn{display:block!important}
+.yt-fallback{margin:12px 0 0;padding:12px 16px;border-radius:10px;background:var(--card);border:1px solid var(--card-line);font-size:15px}
+.sub{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 14px;min-height:4.4em;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.zh{font-size:clamp(1rem,.95rem + .55vw,1.22rem);font-weight:600;line-height:1.45;overflow-wrap:anywhere}
+.en{font-size:clamp(.82rem,.78rem + .3vw,.98rem);color:var(--muted);margin-top:2px;line-height:1.4;overflow-wrap:anywhere}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;align-items:center}
+.bar label{display:inline-flex;align-items:center;gap:6px;font-size:14px;color:var(--muted);max-width:100%}
+button,select{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:8px 12px;
+  font:inherit;font-size:15px;cursor:pointer;min-height:40px;max-width:100%}
+button:hover,select:hover{border-color:var(--accent)}
+button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent-ink);background:var(--note)}
+label:has(#chap){display:flex;align-items:center;gap:.5em;max-width:100%}
+#chap{flex:1 1 auto;min-width:0;max-width:min(420px,100%)}
+#list{list-style:none;margin:12px 0 0;padding:0;max-height:50vh;overflow-y:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+#list li{border-bottom:1px solid var(--line)}
+#list li:last-child{border-bottom:0}
+#list button{display:block;width:100%;text-align:left;border:0;border-radius:0;background:transparent;padding:10px 14px;font-size:15px;line-height:1.55;min-height:0}
+#list button:hover{background:var(--note)}
+#list li.on button{background:var(--card);box-shadow:inset 4px 0 0 var(--accent);font-weight:600}
+#list .ts{color:var(--muted);margin-right:10px;font:13px ui-monospace,SFMono-Regular,Menlo,monospace}
+#list .le{display:block;color:var(--muted);font-size:14px;font-weight:400}
+section.note{margin-top:28px;padding:6px 20px 10px;background:var(--note);border-left:4px solid var(--accent);border-radius:8px;font-size:15px}
+section.note h2{font-size:1.1rem;margin:12px 0 6px}
+section.note h3{font-size:1rem;margin:14px 0 4px}
+section.note p{margin:0 0 .7em}
+@media (max-width:640px){
+  body{font-size:16px}
+  .page{padding:0 16px 48px}
+  header.hero{padding-top:20px}
+  .player-container{border-radius:8px}
+  .sub{padding:7px 10px;min-height:3.9em}
+  .overlay-sub{width:94%}
+  .ov-zh{font-size:clamp(.9rem,3.8vw,1.1rem)}
+  .ov-en{font-size:clamp(.72rem,3vw,.88rem)}
+  section.note{padding:4px 14px 8px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到播放器</a>
+<div class="page">
+<header class="hero">
+<p class="eyebrow">中文字幕播放器</p>
+<h1>別再用簡訊驗證碼！（中文字幕）</h1>
+<p class="lede">區塊勢，2026-11-19；字幕依影片畫面上的燒入字幕擷取</p>
+<nav class="links" aria-label="相關頁面"><a href="index.html">深度導讀</a>　<a href="https://www.youtube.com/watch?v=pA9gXxCqkYQ" target="_blank" rel="noopener noreferrer">YouTube 原影片</a></nav>
+</header>
+<main id="main">
+<div class="player-container" id="player-box">
+<div id="yt"></div>
+<button type="button" class="fs-exit-btn" id="fs-close" aria-label="結束全螢幕">✕ 結束全螢幕</button>
+<div class="overlay-sub" aria-hidden="true"><div class="overlay-sub-box" id="ov-box" style="display:none"><div class="ov-zh" id="ov-zh"></div></div></div>
+</div>
+<p class="yt-fallback" id="yt-fallback" role="alert" hidden>影片無法在本頁播放<span id="yt-err"></span>，請至 <a id="yt-link" href="https://www.youtube.com/watch?v=pA9gXxCqkYQ" target="_blank" rel="noopener noreferrer">YouTube 原影片</a> 觀看。</p>
+<noscript><p class="yt-fallback">本頁需要 JavaScript 才能播放與同步字幕，請至 <a href="https://www.youtube.com/watch?v=pA9gXxCqkYQ">YouTube 原影片</a> 觀看。</p></noscript>
+<div class="sub" aria-live="off">
+<div class="zh" id="zh">按下播放後，字幕會在這裡同步顯示</div>
+</div>
+<div class="bar" role="toolbar" aria-label="字幕控制">
+<button type="button" id="fs" aria-pressed="false">全螢幕字幕</button>
+<button type="button" id="tl" aria-pressed="false" aria-controls="list">字幕清單</button>
+<label>速度 <select id="sp" aria-label="播放速度"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label>
+<label>章節 <select id="chap" aria-label="跳到章節"><option value="0">00:00　序章</option><option value="46">00:46　不用你交出去 也拿得到</option><option value="157">02:37　更好的方式 證明是你</option><option value="240">04:00　今天就換</option></select></label>
+</div>
+<ol id="list" aria-label="字幕清單（點一句跳到該處）" hidden></ol>
+<section class="note" aria-labelledby="notice-h">
+<h2 id="notice-h">說明與版權聲明</h2>
+<p>本網頁僅供個人技術學習、研究與語言交流之用。影片直接嵌入自 YouTube 官方來源，完整版權歸原頻道 <strong>區塊勢</strong>所有。</p>
+<p>本站僅就原影片的中文字幕整理斷句，與影片進行時間軸同步呈現。字幕整理由 AI 模型完成，未經人工校稿，也未對照原音逐句核對；內容以原影片為準。</p>
+<p>如翻譯有未臻完善之處，誠摯歡迎指教；若您喜歡這部影片，誠摯推薦前往 <a href="https://www.youtube.com/watch?v=pA9gXxCqkYQ" target="_blank" rel="noopener noreferrer">YouTube 原始影片</a> 按讚、留言並訂閱原作者頻道，支持原創作者。影片若無法在本頁播放，請直接至 YouTube 原影片觀看。</p>
+<p>權利人如要求下架，將立即移除本頁。</p>
+<p>相關頁面：<a href="index.html">深度導讀</a>。</p>
+<h3>AI 製作聲明</h3>
+<p>本頁字幕由 AI 模型（Claude Opus 5.5）逐張讀取影片畫面上的燒入中文字幕擷取而成，時間軸依畫面字幕切換點自動偵測，可能有零點幾秒誤差；未經人工逐句校對。</p>
+<p>影片中引用的英文片段（TVBS 受訪者、Google 教學影片）只收中文字幕。</p>
+</section>
+</main>
+</div>
+<script type="application/json" id="cue-data">{"video_id":"pA9gXxCqkYQ","bilingual":false,"chapters":[[0,"00:00　序章"],[46,"00:46　不用你交出去 也拿得到"],[157,"02:37　更好的方式 證明是你"],[240,"04:00　今天就換"]],"cues":[[0.4,1.6,"11 月 11 號"],[1.6,4.2,"資安公司 Enea 公布一份研究"],[4.2,5.0,"研究說"],[5.0,7.4,"有一個駭客組織潛進電信網路"],[7.4,9.4,"攔截別人的簡訊和電話"],[9.4,11.2,"主要目標是台灣"],[11.2,12.4,"研究人員還看到"],[12.4,14.4,"有些人的簡訊被攔截之後"],[14.4,17.6,"緊接著就出現一則登入用的驗證碼"],[17.6,19.4,"登入銀行 登入信箱"],[19.4,22.0,"我們都習慣收一則簡訊驗證碼"],[22.0,23.4,"大家學到的規矩是"],[23.4,25.4,"只要不把這組數字告訴別人"],[25.4,26.8,"帳號就安全"],[26.8,28.8,"但在 Enea 看到的攻擊裡"],[28.8,30.8,"簡訊是在半路被接走的"],[30.8,33.2,"沒有人開口把驗證碼交出去"],[33.2,34.4,"我是明恩"],[34.4,36.6,"我的結論是 重要的帳號"],[36.6,38.2,"別再靠簡訊驗證碼"],[38.2,40.6,"改成在你自己的裝置上驗證"],[40.6,43.0,"因為它不用你交出去就會被拿走"],[43.0,44.6,"而要證明是你本人"],[44.6,47.2,"你手機裡就有更好的方式"],[47.2,49.2,"先看問題出在哪"],[49.2,51.6,"簡訊驗證碼不用你交出去"],[51.6,53.0,"別人就拿得到"],[53.0,55.0,"網站把驗證碼寄出去以後"],[55.0,57.0,"只看誰讀到那則簡訊"],[57.0,59.0,"誰讀到 誰就過關"],[59.0,61.2,"簡訊寄出去以後 你看到之前"],[61.2,63.4,"有三個地方會被人拿走"],[63.4,66.0,"第一個地方是電信網路"],[66.0,67.6,"簡訊要送到你手上"],[67.6,69.2,"電信網路要先知道"],[69.2,71.2,"你的手機現在在哪裡"],[71.2,72.4,"Enea 的研究說"],[72.4,74.2,"這個叫 SilentAir 的組織"],[74.2,77.0,"從已經被入侵的電信節點下手"],[77.0,78.4,"送出假的位置更新"],[78.4,81.0,"告訴網路這支手機換了地方"],[81.0,82.6,"之後的簡訊和電話"],[82.6,84.8,"就改送到駭客控制的路徑"],[84.8,87.6,"整個過程 不需要碰到你的手機"],[87.6,90.0,"第二個地方是電信櫃檯"],[90.0,91.0,"歹徒冒充你"],[91.0,92.8,"或是買通電信公司的員工"],[92.8,94.6,"把你的門號換發到一張新的"],[94.6,97.4,"SIM 卡上 之後寄給你的驗證碼"],[97.4,98.8,"就送到他手上"],[98.8,101.0,"美國聯邦調查局在 2021 年"],[101.0,103.8,"收到 1,611 件這類投訴"],[103.8,106.6,"損失超過 6,800 萬美元"],[106.6,108.2,"台灣也發生過"],[108.2,110.0,"2022 年 TVBS 報導"],[110.0,112.0,"一位人在海外的 A 先生"],[112.0,115.0,"門號被人用變造的證件補發走了"],[115.0,117.6,"他在那則報導裡這樣說"],[117.6,119.0,"銀行就告訴我說"],[119.0,121.4,"他是用我的手機"],[121.4,123.0,"那我就說不可能"],[123.0,125.0,"因為 SIM 卡在我手上"],[125.0,126.8,"但是最後我跟家人討論到最後"],[126.8,128.2,"他們就試著撥我的電話"],[128.2,129.6,"發現竟然有人接起來了"],[129.6,131.8,"我本人是正主"],[131.8,134.2,"是去把它鎖起來 是要求停話"],[134.2,135.6,"但停完後它立刻被解開"],[135.6,137.0,"而電信公司就給他解了"],[137.0,138.4,"即使我反映了之後"],[138.4,140.2,"電信公司還是讓他解"],[141.8,144.4,"第三個地方是你自己的手機"],[144.4,146.2,"Google 的資安團隊說明過"],[146.2,148.6,"詐騙 App 常常要求讀取簡訊"],[148.6,150.8,"讀取通知的權限 拿到之後"],[150.8,153.2,"就能在背景把驗證碼讀走"],[153.2,154.2,"這三個地方"],[154.2,156.0,"沒有一個需要你開口把"],[156.0,158.0,"驗證碼告訴別人"],[158.0,160.6,"那不靠簡訊驗證碼 還有什麼方式"],[160.6,162.6,"能證明登入的是你本人？"],[162.6,164.8,"有 而且比簡訊更好"],[164.8,167.0,"用你手上的手機就能做"],[167.0,168.6,"這些方式不經過電信"],[168.6,170.0,"把驗證這件事"],[170.0,172.8,"從門號搬到你自己的裝置上"],[172.8,174.0,"一種是驗證器 App"],[174.0,176.2,"Google Authenticator"],[176.2,177.2,"設定的時候"],[177.2,180.0,"網站和你的手機先約好一組秘密"],[180.0,183.0,"之後由手機自己算出一次性的數字"],[183.0,184.8,"這組數字不是寄來的"],[184.8,186.6,"手機沒有網路 沒有訊號"],[186.6,188.2,"也照樣算得出來"],[188.2,191.0,"電信網路和電信櫃檯都碰不到它"],[191.0,194.2,"像幣安 就把它列為驗證選項之一"],[194.2,196.4,"更進一步的是通行密鑰"],[196.4,198.0,"英文叫 passkey"],[198.0,200.0,"登入的時候不用打任何數字"],[200.0,203.0,"只要用指紋或臉打開手機的螢幕鎖"],[203.0,206.0,"由手機裡的通行密鑰幫你回答網站"],[206.0,208.8,"它只認真的網站 假網站騙不走"],[208.8,211.6,"你的指紋和臉也不會離開手機"],[211.6,214.8,"Google 的官方教學是這樣示範的"],[214.8,218.6,"在支援通行密鑰的網站和 App"],[218.6,220.2,"瀏覽器或作業系統"],[220.2,222.6,"會提示建立通行密鑰"],[222.6,225.4,"只要使用裝置的螢幕鎖定"],[225.4,229.2,"像是碰觸指紋感應器就能繼續"],[229.2,232.4,"不必輸入或記住任何東西"],[232.4,234.8,"之後要登入帳號時"],[234.8,240.6,"只會提示使用者解鎖裝置"],[240.6,243.0,"所以今天就可以做一件事"],[243.0,244.8,"打開你最重要的帳號"],[244.8,246.2,"像信箱和交易所"],[246.2,248.8,"到安全設定裡找通行密鑰"],[248.8,251.8,"有就加上去 沒有就加驗證器"],[251.8,253.0,"加完再看一眼"],[253.0,255.6,"簡訊是不是還留在那裡當備用"],[255.6,257.4,"美國的網路安全主管機關"],[257.4,260.6,"CISA 提醒過 加了新的驗證方式"],[260.6,263.0,"舊的簡訊驗證不會自動關掉"],[263.0,265.2,"先準備好別的備用登入方式"],[265.2,266.8,"再把簡訊關掉"],[266.8,268.0,"你最重要的帳號"],[268.0,269.6,"現在是用什麼驗證？"],[269.6,270.8,"歡迎留言告訴我"],[270.8,272.2,"如果你喜歡這支影片"],[272.2,273.6,"可以幫它按「熱推」"],[273.6,275.0,"也歡迎加入區塊勢的"],[275.0,277.0,"YouTube 會員「區塊試吃」"],[277.0,278.4,"小額支持這個頻道"],[278.4,281,"我是明恩 我們下次見"]]}</script>
+<script>
+(function(){
+var D=JSON.parse(document.getElementById('cue-data').textContent);
+var VID=D.video_id, CUES=D.cues, CHAPS=D.chapters, BI=D.bilingual;
+function $(id){return document.getElementById(id);}
+var p=null, cur=-2, curChap=-2, listBuilt=false;
+function find(t){
+  var lo=0, hi=CUES.length-1, r=-1;
+  while(lo<=hi){var m=(lo+hi)>>1; if(CUES[m][0]<=t){r=m;lo=m+1;}else{hi=m-1;}}
+  return (r>=0 && t<CUES[r][1]+0.3)?r:-1;
+}
+function fmt(s){s=Math.floor(s);var m=Math.floor(s/60),x=s%60;return (m<10?'0':'')+m+':'+(x<10?'0':'')+x;}
+function ytUrl(t){return 'https://www.youtube.com/watch?v='+encodeURIComponent(VID)+(t>0?'&t='+Math.floor(t)+'s':'');}
+function show(i){
+  if(i===cur)return;
+  cur=i;
+  var zh=i<0?'':CUES[i][2], en=(i<0||!BI)?'':CUES[i][3];
+  $('zh').textContent=zh; $('ov-zh').textContent=zh;
+  if(BI){$('en').textContent=en; $('ov-en').textContent=en;}
+  $('ov-box').style.display=(zh||en)?'inline-block':'none';
+  var l=$('list');
+  if(!l.hidden && listBuilt){
+    var old=l.querySelector('li.on'); if(old){old.classList.remove('on');old.firstChild.removeAttribute('aria-current');}
+    var e=l.children[i];
+    if(e){e.classList.add('on');e.firstChild.setAttribute('aria-current','true');
+      var top=e.offsetTop-l.offsetTop; if(top<l.scrollTop||top>l.scrollTop+l.clientHeight-e.offsetHeight){l.scrollTop=top-l.clientHeight/3;}}
+  }
+}
+function syncChap(t){
+  var sel=$('chap'); if(!sel)return;
+  var k=-1; for(var j=0;j<CHAPS.length;j++){if(CHAPS[j][0]<=t)k=j;}
+  if(k<0)k=0;
+  if(k!==curChap && document.activeElement!==sel){curChap=k; sel.selectedIndex=k;}
+}
+function now(){return (p&&p.getCurrentTime)?(p.getCurrentTime()||0):T0;}
+function tick(){if(p&&p.getCurrentTime){var t=p.getCurrentTime()||0; show(find(t)); syncChap(t);}}
+function seek(t){
+  if(p&&p.seekTo){p.seekTo(t,true); if(p.playVideo)p.playVideo();}
+  show(find(t+0.01)); syncChap(t);
+}
+function fallback(code){
+  $('yt-fallback').hidden=false;
+  $('yt-err').textContent=(code!==null&&code!==undefined)?'（錯誤碼 '+code+'）':'';
+  $('yt-link').href=ytUrl(now());
+}
+function parseT(){
+  var m=/[?&]t=([^&#]+)/.exec(location.search); if(!m)return 0;
+  var v=decodeURIComponent(m[1]).trim(), h;
+  if(/^\d+(\.\d+)?s?$/.test(v))return parseFloat(v);
+  if((h=/^(\d+):(\d{1,2})(?::(\d{1,2}))?$/.exec(v)))return h[3]!==undefined?(+h[1])*3600+(+h[2])*60+(+h[3]):(+h[1])*60+(+h[2]);
+  if((h=/^(?:(\d+)h)?(?:(\d+)m)?(?:(\d+)s)?$/.exec(v))&&v)return (+(h[1]||0))*3600+(+(h[2]||0))*60+(+(h[3]||0));
+  return 0;
+}
+var T0=parseT();
+function init(){
+  if(p)return;
+  p=new YT.Player('yt',{videoId:VID,
+    playerVars:{playsinline:1,rel:0,cc_load_policy:0,start:Math.floor(T0)},
+    events:{onError:function(e){fallback(e?e.data:null);}}});
+  setInterval(tick,200);
+}
+window.onYouTubeIframeAPIReady=init;
+if(window.YT&&window.YT.Player){init();}
+else{var s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';s.onerror=function(){fallback(null);};document.head.appendChild(s);}
+if(T0>0){show(find(T0));syncChap(T0);}else{syncChap(0);}
+
+function toggle(btn,ids){
+  var hide=!$(ids[0]).hidden;
+  ids.forEach(function(id){$(id).hidden=hide;});
+  btn.setAttribute('aria-pressed',hide?'false':'true');
+}
+if($('tz'))$('tz').addEventListener('click',function(){toggle(this,['zh','ov-zh']);});
+if($('te'))$('te').addEventListener('click',function(){toggle(this,['en','ov-en']);});
+$('sp').addEventListener('change',function(e){if(p&&p.setPlaybackRate)p.setPlaybackRate(+e.target.value);});
+if($('chap'))$('chap').addEventListener('change',function(e){seek(+e.target.value);});
+
+$('tl').addEventListener('click',function(){
+  var l=$('list');
+  l.hidden=!l.hidden;
+  this.setAttribute('aria-pressed',l.hidden?'false':'true');
+  if(!l.hidden&&!listBuilt){
+    var frag=document.createDocumentFragment();
+    CUES.forEach(function(c,i){
+      var li=document.createElement('li'), b=document.createElement('button');
+      b.type='button';
+      var ts=document.createElement('span'); ts.className='ts'; ts.textContent=fmt(c[0]);
+      var z=document.createElement('span'); z.className='lz'; z.textContent=c[2];
+      b.appendChild(ts); b.appendChild(z);
+      if(BI){var e=document.createElement('span'); e.className='le'; e.lang='en'; e.textContent=c[3]; b.appendChild(e);}
+      b.setAttribute('aria-label',fmt(c[0])+' '+c[2]);
+      b.addEventListener('click',function(){seek(c[0]);});
+      li.appendChild(b); frag.appendChild(li);
+    });
+    l.appendChild(frag); listBuilt=true;
+  }
+  var keep=cur; cur=-2; show(keep);
+});
+
+var box=$('player-box'), fsBtn=$('fs');
+var noDivFs=/iPhone|iPod/i.test(navigator.userAgent)||!(box.requestFullscreen||box.webkitRequestFullscreen);
+function isFs(){return box.classList.contains('is-web-fs')||!!(document.fullscreenElement||document.webkitFullscreenElement);}
+function fsUI(on){fsBtn.setAttribute('aria-pressed',on?'true':'false');fsBtn.textContent=on?'結束全螢幕':'全螢幕字幕';}
+function webFs(){box.classList.add('is-web-fs');document.body.style.overflow='hidden';fsUI(true);$('fs-close').focus();}
+function enterFs(){
+  if(noDivFs){webFs();return;}
+  try{var r=box.requestFullscreen?box.requestFullscreen():box.webkitRequestFullscreen(); if(r&&r.catch)r.catch(webFs);}catch(e){webFs();}
+}
+function exitFs(){
+  if(document.fullscreenElement||document.webkitFullscreenElement){
+    try{if(document.exitFullscreen)document.exitFullscreen();else if(document.webkitExitFullscreen)document.webkitExitFullscreen();}catch(e){}
+  }
+  if(box.classList.contains('is-web-fs')){box.classList.remove('is-web-fs');document.body.style.overflow='';}
+  fsUI(false);
+}
+fsBtn.addEventListener('click',function(){if(isFs())exitFs();else enterFs();});
+$('fs-close').addEventListener('click',function(e){e.stopPropagation();exitFs();fsBtn.focus();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&box.classList.contains('is-web-fs'))exitFs();});
+function onNative(){var n=!!(document.fullscreenElement||document.webkitFullscreenElement);if(n||!box.classList.contains('is-web-fs'))fsUI(n);}
+document.addEventListener('fullscreenchange',onNative);
+document.addEventListener('webkitfullscreenchange',onNative);
+})();
+</script>
+</body>
+</html>

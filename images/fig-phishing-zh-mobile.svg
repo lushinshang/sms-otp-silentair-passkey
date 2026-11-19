@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1220" role="img" aria-labelledby="t d" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+<title id="t">碰到假網站時，驗證器與通行密鑰的差別</title><desc id="d">上排驗證器 App：假網站要你輸入驗證碼，你把手機算出的數字打進去，攻擊者把數字轉送到真網站登入。下排通行密鑰：假網站要求登入，手機比對網址發現不符，不回應，沒有數字可騙。結論：數字可以被轉送，綁定網址的回應不行。</desc>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6470"/></marker></defs>
+<rect width="600" height="1220" rx="14" fill="#f6f3ee"/>
+<text x="300.0" y="66" font-size="32" font-weight="700" fill="#b3261e" text-anchor="middle">驗證器 App</text>
+<rect x="70.0" y="90" width="460" height="120" rx="14" fill="#ffffff" stroke="#b3261e" stroke-width="3"/>
+<text x="300.0" y="141.6" font-size="28" font-weight="400" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">假網站要你</tspan><tspan x="300.0" dy="36.4">輸入驗證碼</tspan></text>
+<line x1="300.0" y1="214" x2="300.0" y2="256" stroke="#5b6470" stroke-width="3" marker-end="url(#ar)"/>
+<rect x="70.0" y="260" width="460" height="120" rx="14" fill="#ffffff" stroke="#b3261e" stroke-width="3"/>
+<text x="300.0" y="311.6" font-size="28" font-weight="400" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">你把手機算出的</tspan><tspan x="300.0" dy="36.4">數字打進去</tspan></text>
+<line x1="300.0" y1="384" x2="300.0" y2="426" stroke="#5b6470" stroke-width="3" marker-end="url(#ar)"/>
+<rect x="70.0" y="430" width="460" height="120" rx="14" fill="#ffffff" stroke="#b3261e" stroke-width="3"/>
+<text x="300.0" y="481.6" font-size="28" font-weight="400" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">攻擊者把數字</tspan><tspan x="300.0" dy="36.4">轉送到真網站登入</tspan></text>
+<text x="300.0" y="616" font-size="32" font-weight="700" fill="#1f5f99" text-anchor="middle">通行密鑰</text>
+<rect x="70.0" y="640" width="460" height="120" rx="14" fill="#ffffff" stroke="#1f5f99" stroke-width="3"/>
+<text x="300.0" y="709.8" font-size="28" font-weight="400" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">假網站要求登入</tspan></text>
+<line x1="300.0" y1="764" x2="300.0" y2="806" stroke="#5b6470" stroke-width="3" marker-end="url(#ar)"/>
+<rect x="70.0" y="810" width="460" height="120" rx="14" fill="#ffffff" stroke="#1f5f99" stroke-width="3"/>
+<text x="300.0" y="861.6" font-size="28" font-weight="400" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">手機比對網址，</tspan><tspan x="300.0" dy="36.4">發現不符</tspan></text>
+<line x1="300.0" y1="934" x2="300.0" y2="976" stroke="#5b6470" stroke-width="3" marker-end="url(#ar)"/>
+<rect x="70.0" y="980" width="460" height="120" rx="14" fill="#ffffff" stroke="#1f5f99" stroke-width="3"/>
+<text x="300.0" y="1031.6" font-size="28" font-weight="400" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">不回應，</tspan><tspan x="300.0" dy="36.4">沒有數字可騙</tspan></text>
+<text x="300.0" y="1180.5" font-size="30" font-weight="700" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">數字可以被轉送，綁定網址的回應不行</tspan></text>
+</svg>

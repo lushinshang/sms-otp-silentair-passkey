@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1060" role="img" aria-labelledby="t d" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif"><title id="t">簡訊驗證碼被讀走的三個地方</title><desc id="d">流程：網站寄出驗證碼，經過電信網路、電信櫃檯、你的手機三個地方，最後你才看到驗證碼。電信網路可能被假的位置更新把簡訊改道；電信櫃檯可能被冒名換發 SIM 卡；你的手機可能被詐騙 App 讀簡訊或通知。三個地方都不需要你開口。</desc><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6470"/></marker></defs><rect width="600" height="1060" rx="14" fill="#f6f3ee"/>
+<rect x="60" y="40" width="480" height="80" rx="14" fill="#ffffff" stroke="#5b6470" stroke-width="2"/>
+<text x="300.0" y="92" font-size="28" fill="#1f2328" text-anchor="middle">網站寄出驗證碼</text>
+<line x1="300.0" y1="124" x2="300.0" y2="172" stroke="#5b6470" stroke-width="3" marker-end="url(#ar)"/>
+<rect x="60" y="176" width="480" height="150" rx="14" fill="#ffffff" stroke="#b3261e" stroke-width="3"/>
+<text x="300.0" y="238" font-size="34" font-weight="700" fill="#b3261e" text-anchor="middle">電信網路</text>
+<text x="300.0" y="288" font-size="26" fill="#1f2328" text-anchor="middle">假的位置更新，簡訊改道</text>
+<line x1="300.0" y1="330" x2="300.0" y2="378" stroke="#5b6470" stroke-width="3" marker-end="url(#ar)"/>
+<rect x="60" y="382" width="480" height="150" rx="14" fill="#ffffff" stroke="#b3261e" stroke-width="3"/>
+<text x="300.0" y="444" font-size="34" font-weight="700" fill="#b3261e" text-anchor="middle">電信櫃檯</text>
+<text x="300.0" y="494" font-size="26" fill="#1f2328" text-anchor="middle">冒名換發 SIM 卡</text>
+<line x1="300.0" y1="536" x2="300.0" y2="584" stroke="#5b6470" stroke-width="3" marker-end="url(#ar)"/>
+<rect x="60" y="588" width="480" height="150" rx="14" fill="#ffffff" stroke="#b3261e" stroke-width="3"/>
+<text x="300.0" y="650" font-size="34" font-weight="700" fill="#b3261e" text-anchor="middle">你的手機</text>
+<text x="300.0" y="700" font-size="26" fill="#1f2328" text-anchor="middle">詐騙 App 讀簡訊或通知</text>
+<line x1="300.0" y1="742" x2="300.0" y2="790" stroke="#5b6470" stroke-width="3" marker-end="url(#ar)"/>
+<rect x="60" y="794" width="480" height="80" rx="14" fill="#ffffff" stroke="#5b6470" stroke-width="2"/>
+<text x="300.0" y="846" font-size="28" fill="#1f2328" text-anchor="middle">你看到驗證碼</text>
+<text x="300.0" y="944" font-size="30" font-weight="700" fill="#1f2328" text-anchor="middle">三個地方，都不需要你開口</text>
+</svg>

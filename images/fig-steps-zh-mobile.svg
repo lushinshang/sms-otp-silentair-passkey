@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 1130" role="img" aria-labelledby="t d" font-family="'PingFang TC','Noto Sans TC','Microsoft JhengHei',sans-serif">
+<title id="t">今天就換：重要帳號怎麼換</title><desc id="d">第一排：打開最重要的帳號，例如信箱和交易所；到安全設定找通行密鑰；有就加通行密鑰，沒有就加驗證器。第二排：先備好其他登入方式；再關掉簡訊驗證；最後確認帳號救援是否還寄到簡訊。</desc>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5b6470"/></marker></defs>
+<rect width="600" height="1130" rx="14" fill="#f6f3ee"/>
+<text x="300.0" y="66" font-size="32" font-weight="700" fill="#1f5f99" text-anchor="middle">先加新的</text>
+<rect x="70.0" y="90" width="460" height="120" rx="14" fill="#ffffff" stroke="#1f5f99" stroke-width="3"/>
+<text x="300.0" y="141.6" font-size="28" font-weight="400" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">打開最重要的帳號，</tspan><tspan x="300.0" dy="36.4">例如信箱和交易所</tspan></text>
+<line x1="300.0" y1="214" x2="300.0" y2="256" stroke="#5b6470" stroke-width="3" marker-end="url(#ar)"/>
+<rect x="70.0" y="260" width="460" height="120" rx="14" fill="#ffffff" stroke="#1f5f99" stroke-width="3"/>
+<text x="300.0" y="311.6" font-size="28" font-weight="400" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">到安全設定</tspan><tspan x="300.0" dy="36.4">找通行密鑰</tspan></text>
+<line x1="300.0" y1="384" x2="300.0" y2="426" stroke="#5b6470" stroke-width="3" marker-end="url(#ar)"/>
+<rect x="70.0" y="430" width="460" height="120" rx="14" fill="#ffffff" stroke="#1f5f99" stroke-width="3"/>
+<text x="300.0" y="481.6" font-size="28" font-weight="400" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">有就加通行密鑰，</tspan><tspan x="300.0" dy="36.4">沒有就加驗證器</tspan></text>
+<text x="300.0" y="616" font-size="32" font-weight="700" fill="#b3261e" text-anchor="middle">再拆舊的</text>
+<rect x="70.0" y="640" width="460" height="120" rx="14" fill="#ffffff" stroke="#b3261e" stroke-width="3"/>
+<text x="300.0" y="709.8" font-size="28" font-weight="400" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">先備好其他登入方式</tspan></text>
+<line x1="300.0" y1="764" x2="300.0" y2="806" stroke="#5b6470" stroke-width="3" marker-end="url(#ar)"/>
+<rect x="70.0" y="810" width="460" height="120" rx="14" fill="#ffffff" stroke="#b3261e" stroke-width="3"/>
+<text x="300.0" y="879.8" font-size="28" font-weight="400" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">再關掉簡訊驗證</tspan></text>
+<line x1="300.0" y1="934" x2="300.0" y2="976" stroke="#5b6470" stroke-width="3" marker-end="url(#ar)"/>
+<rect x="70.0" y="980" width="460" height="120" rx="14" fill="#ffffff" stroke="#b3261e" stroke-width="3"/>
+<text x="300.0" y="1031.6" font-size="28" font-weight="400" fill="#1f2328" text-anchor="middle"><tspan x="300.0" dy="0">確認帳號救援</tspan><tspan x="300.0" dy="36.4">是否還寄到簡訊</tspan></text>
+</svg>
